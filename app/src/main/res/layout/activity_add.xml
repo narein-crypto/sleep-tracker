@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <ImageView
+        android:id="@+id/imageViewVerySad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#F44336"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSad"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_very_dissatisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFEB3B"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSad"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHappy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sentiment_neutral_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewSad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#FF9800"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNeutral"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewVerySad"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNeutral"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_dissatisfied_black_48dp" />
+
+    <ImageView
+        android:id="@+id/imageViewVeryHappy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#4CAF50"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sentiment_very_satisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewHappy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:background="#8BC34A"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewVeryHappy"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVeryHappy"
+        app:layout_constraintTop_toTopOf="@+id/imageViewVeryHappy"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:text="@string/quality"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewNeutral"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewNeutral"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNeutral" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
